@@ -1,0 +1,54 @@
+.wrapper {
+    width: 65vw;
+    height: 45px;
+    margin-top: 10px;
+    padding: 0 24px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid var(--black400);
+
+    .line {
+        text-decoration-line: line-through;
+    }
+
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+
+    .buttonWrap {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        color: var(--black400);
+
+        &.complete {
+            color: var(--subBg200);
+        }
+    }
+    .trashBtn {
+        visibility: hidden;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+    }
+    &:hover .trashBtn {
+        padding: 5px;
+        position: absolute;
+        right: -35px;
+        visibility: visible;
+        opacity: 1;
+        font-size: 24px;
+        color: var(--black400);
+
+        &:hover {
+            color: var(--subBg200);
+        }
+    }
+
+    // .buttonWrap:hover {
+    //     visibility: visible;
+    //     opacity: 1;
+    // }
+}
